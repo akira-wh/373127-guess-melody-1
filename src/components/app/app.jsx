@@ -1,5 +1,5 @@
 import React from 'react';
-import Intro from './intro.jsx';
+import Intro from '../intro/intro.jsx';
 
 const App = (props) => {
   const setting = props.setting;
