@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * Представление Intro Page.
@@ -31,6 +32,14 @@ const IntroPage = (props) => {
       <p className="welcome__text">Удачи!</p>
     </section>
   );
+};
+
+/**
+ * Валидация входных данных.
+ */
+IntroPage.propTypes = {
+  gameTime: PropTypes.number.isRequired,
+  allowableMistakesNumber: PropTypes.number.isRequired
 };
 
 export default IntroPage;
