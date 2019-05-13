@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Intro = (props) => {
+/**
+ * Представление Intro Page.
+ *
+ * @function IntroPage
+ * @param {object} props — данные компонента
+ * @return {object}
+ */
+const IntroPage = (props) => {
   const {gameTime, allowableMistakesNumber} = props;
 
   return (
@@ -26,4 +33,4 @@ const Intro = (props) => {
   );
 };
 
-export default Intro;
+export default IntroPage;

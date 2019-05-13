@@ -16,12 +16,20 @@ const APP_SETTING = {
 };
 
 /**
- * Селектор контентной части приложения.
+ * Селектор root-контейнера приложения.
  *
  * @constant
  * @type {string}
  */
-const APP_CONTENT_SELECTOR = `.main`;
+const APP_ROOT_SELECTOR = `.main`;
+
+/**
+ * Root-контейнер приложения.
+ *
+ * @constant
+ * @type {node}
+ */
+const APP_ROOT = document.querySelector(APP_ROOT_SELECTOR);
 
 /**
  * Инициализация приложения.
@@ -29,7 +37,7 @@ const APP_CONTENT_SELECTOR = `.main`;
  * @function initApp
  */
 const initApp = () => {
-  ReactDOM.render(<App setting={APP_SETTING}/>, document.querySelector(APP_CONTENT_SELECTOR));
+  ReactDOM.render(<App setting={APP_SETTING}/>, APP_ROOT);
 };
 
 initApp();
