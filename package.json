@@ -6,8 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode development",
-    "test": "npm run eslint && jest",
-    "eslint": "eslint src/**/*.js src/**/*.jsx"
+    "test": "npm run eslint && npm run jest",
+    "eslint": "eslint src/**/*.js src/**/*.jsx",
+    "jest": "jest"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",
