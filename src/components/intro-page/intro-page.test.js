@@ -10,7 +10,11 @@ it(`Отрисовка представления IntroPage`, () => {
   };
 
   const view = renderer.create(
-      <IntroPage gameTime={setting.GAME_TIME} allowableMistakesNumber={setting.ALLOWABLE_MISTAKES_NUMBER}/>
+      <IntroPage
+        gameTime={setting.GAME_TIME}
+        allowableMistakesNumber={setting.ALLOWABLE_MISTAKES_NUMBER}
+        onStartButtonClick={(evt) => evt.preventDefault()}
+      />
   ).toJSON();
 
   expect(view).toMatchSnapshot();
