@@ -13,7 +13,11 @@ import IntroPage from '../intro-page/intro-page.jsx';
 const App = (props) => {
   const setting = props.setting;
 
-  return <IntroPage gameTime={setting.GAME_TIME} allowableMistakesNumber={setting.ALLOWABLE_MISTAKES_NUMBER}/>;
+  return <IntroPage
+    gameTime={setting.GAME_TIME}
+    allowableMistakesNumber={setting.ALLOWABLE_MISTAKES_NUMBER}
+    onStartButtonClick={(evt) => evt.preventDefault()}
+  />;
 };
 
 /**
