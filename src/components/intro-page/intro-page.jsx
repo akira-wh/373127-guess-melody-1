@@ -1,6 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Intro = (props) => {
+/**
+ * Представление Intro Page.
+ *
+ * @function IntroPage
+ * @param {object} props — данные компонента
+ * @return {object}
+ */
+const IntroPage = (props) => {
   const {gameTime, allowableMistakesNumber} = props;
 
   return (
@@ -26,4 +34,12 @@ const Intro = (props) => {
   );
 };
 
-export default Intro;
+/**
+ * Валидация входных данных.
+ */
+IntroPage.propTypes = {
+  gameTime: PropTypes.number.isRequired,
+  allowableMistakesNumber: PropTypes.number.isRequired
+};
+
+export default IntroPage;
