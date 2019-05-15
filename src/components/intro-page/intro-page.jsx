@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
  * @return {object}
  */
 const IntroPage = (props) => {
-  const {gameTime, allowableMistakesNumber} = props;
+  const {gameTime, allowableMistakesNumber, onStartButtonClick} = props;
 
   return (
     <section className="welcome">
@@ -19,7 +19,7 @@ const IntroPage = (props) => {
           alt="Угадай мелодию"/>
       </div>
 
-      <button className="welcome__button">
+      <button className="welcome__button" onClick={onStartButtonClick}>
         <span className="visually-hidden">Начать игру</span>
       </button>
 
@@ -39,7 +39,8 @@ const IntroPage = (props) => {
  */
 IntroPage.propTypes = {
   gameTime: PropTypes.number.isRequired,
-  allowableMistakesNumber: PropTypes.number.isRequired
+  allowableMistakesNumber: PropTypes.number.isRequired,
+  onStartButtonClick: PropTypes.func.isRequired
 };
 
 export default IntroPage;
